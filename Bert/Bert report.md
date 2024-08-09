@@ -1,4 +1,4 @@
-## Transformer学习（二）：Bert：
+## Bert report
 
 #### 论文网址：[Bert](https://arxiv.org/abs/1810.04805)
 

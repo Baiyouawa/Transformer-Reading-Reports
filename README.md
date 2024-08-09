@@ -27,5 +27,11 @@ Transformer-Reading-Report/
 #### 论文阅读报告：[Attention is all you need report](url)
 
 #### 核心图：
-![Transformer框架]()
+<table>
+  <tr>
+    <td><img src="images/Attention1.png" alt="Attention1" width="600"/></td>
+    <td><img src="images/Attention2.png" alt="Attention2" width="700"/></td>
+  </tr>
+</table>
+
 

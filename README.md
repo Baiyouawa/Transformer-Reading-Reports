@@ -24,7 +24,7 @@ Transformer-Reading-Report/
 ### （一）：Attention is all you need
 #### 原论文链接：[Attention is all you need](https://arxiv.org/abs/1706.03762)
 #### 借鉴视频讲解：[跟李沐学AI](https://www.bilibili.com/video/BV1pu411o7BE/?spm_id_from=333.999.0.0&vd_source=6e22f74cbbb0cdf9444235d6ad11aabf)
-#### 论文阅读报告：[Attention is all you need report](url)
+#### 论文阅读报告：[Attention is all you need report](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/Attention%20is%20all%20you%20need/Attention%20is%20all%20you%20need%20report.md)
 
 #### 核心图：
 <table>

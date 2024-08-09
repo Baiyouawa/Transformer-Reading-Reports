@@ -29,8 +29,8 @@ Transformer-Reading-Report/
 #### 核心图：
 <table>
   <tr>
-    <td><img src="images/Attention1.png" alt="Attention1" width="600"/></td>
-    <td><img src="images/Attention2.png" alt="Attention2" width="700"/></td>
+    <td><img src="images/Attention1.png" alt="Attention1" width="900"/></td>
+    <td><img src="images/Attention2.png" alt="Attention2" width="900"/></td>
   </tr>
 </table>
 

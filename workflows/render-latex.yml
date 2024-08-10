@@ -1,0 +1,24 @@
+name: Render LaTeX
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Pandoc
+      run: sudo apt-get install -y pandoc
+
+    - name: Render LaTeX
+      run: pandoc README.md -o README.html
+
+    - name: Commit changes
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git add README.html
+        git commit -m 'Render LaTeX equations'
+        git push

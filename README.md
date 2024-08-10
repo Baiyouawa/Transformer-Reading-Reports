@@ -5,19 +5,19 @@
 ## 文档结构：
 ```
 Transformer-Reading-Report/
-|—— Attention is all you need/ |—— Attention is all you need report.md
+|—— Attention is all you need/ |—— Attention is all you need report.md #阅读报告
                                |——
 
-|—— Bert/ |—— Bert report.md
+|—— Bert/ |—— Bert report.md #阅读报告
           |——
 
-|—— VIT/  |—— VIT report.md
+|—— VIT/  |—— VIT report.md #阅读报告
           |——
 
-|—— swintransformer |—— swintransformer.report
+|—— swintransformer |—— swintransformer.report # 阅读报告
                     |——
 
-|—— README.md         
+|—— README.md   #简介与链接
 ```
 ## 各个分项目重点内容：
 ### 包含链接与核心概念图，具体段落与补充知识请见论文阅读报告，实现复现后续补充

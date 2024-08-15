@@ -10,7 +10,8 @@ Transformer-Reading-Report/
                                |—— demo.py
 
 |—— Bert/ |—— Bert report.md #阅读报告
-          |——
+          |—— images
+          |—— demo.py
 
 |—— VIT/  |—— VIT report.md #阅读报告
           |——
@@ -73,5 +74,10 @@ Transformer-Reading-Report/
 #### 借鉴视频链接：[李沐学AI：bert](https://www.bilibili.com/video/BV1PL411M7eQ?vd_source=88664659bdda4409e78f614f5f213ce8)
 #### 论文阅读报告：[论文阅读报告](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/Bert/Bert%20report.md)
 
-
-
+#### 核心图：
+<table>
+  <tr>
+    <td><img src="images/Bert1.png" alt="Attention1" width="1300"/></td>
+    <td><img src="images/Bert2.png" alt="Attention2" width="1300"/></td>
+  </tr>
+</table>

@@ -14,10 +14,12 @@ Transformer-Reading-Report/
           |—— demo.py
 
 |—— VIT/  |—— VIT report.md #阅读报告
-          |——
+          |—— images
+          |—— demo.py
 
 |—— swintransformer |—— swintransformer.report # 阅读报告
-                    |——
+                    |—— images
+                    |—— demo.py
 
 |—— README.md   #简介与链接
 ```
@@ -73,7 +75,7 @@ Transformer-Reading-Report/
 #### 原论文链接：[Bert](https://arxiv.org/abs/1810.04805)
 #### 借鉴视频链接：[李沐学AI：bert](https://www.bilibili.com/video/BV1PL411M7eQ?vd_source=88664659bdda4409e78f614f5f213ce8)
 #### 论文阅读报告：[论文阅读报告](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/Bert/Bert%20report.md)
-
+**Bert是一种用于语言理解预训练的双向的transformer模型，他可以联系左右上下文，不同于Elmo，无需再对特定任务时进行任务框架的大量修改，而是联系上下文的微调方式，进而提升了在词级，句子级理解。**
 #### 核心图：
 <table>
   <tr>
@@ -81,3 +83,14 @@ Transformer-Reading-Report/
     <td><img src="images/Bert2.png" alt="Attention2" width="1300"/></td>
   </tr>
 </table>
+
+**首先在右图我们可以看到输入操作：**
+在Bert当中我们的输入token序列，可以是单个句子也可以是两个句子打包在一起。每个序列的第一个token是一个特殊的分类【CLS】，然后我们通过两种方式区别句子，首先我们用一个特殊的token【SEP】将他们分开，其次我们为每个token添加一个学习到的嵌入，来表示是句子AorB。也就是说，输入是由相应的token+段落嵌入+位置嵌入求和构建的。
+**然后在左图我们可以看到模型架构：**
+Bert的模型核心就是基于原始实现的多层双向Transformer**编码器**，具体细节在上面可以看到。
+-----
+
+
+
+
+

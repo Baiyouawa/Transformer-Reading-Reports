@@ -88,8 +88,18 @@ Transformer-Reading-Report/
 ##### 在Bert当中我们的输入token序列，可以是单个句子也可以是两个句子打包在一起。每个序列的第一个token是一个特殊的分类【CLS】，然后我们通过两种方式区别句子，首先我们用一个特殊的token【SEP】将他们分开，其次我们为每个token添加一个学习到的嵌入，来表示是句子AorB。也就是说，输入是由相应的token+段落嵌入+位置嵌入求和构建的。
   ##### 然后在左图我们可以看到模型架构：
 ##### Bert的模型核心就是基于原始实现的多层双向Transformer**编码器**，具体细节在上面可以看到。
------
+demo文件：[demo](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/Bert/demo.py)
 
+-----
+### (三）：VIT
+#### 原论文链接：[VIT](https://arxiv.org/pdf/2010.11929)
+#### 借鉴视频链接：[李沐学AI](https://www.bilibili.com/video/BV15P4y137jb/?spm_id_from=333.999.0.0&vd_source=6e22f74cbbb0cdf9444235d6ad11aabf)
+#### 论文阅读报告：[论文阅读报告](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/VIT/VIT%20report.md)
+
+#### 核心图：
+ <td><img src="images/VIT1.png" alt="VIT1" width="800"/></td>
+
+ 
 
 
 

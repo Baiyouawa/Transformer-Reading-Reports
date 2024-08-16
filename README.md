@@ -96,11 +96,37 @@ demo文件：[demo](https://github.com/Baiyouawa/Transformer-Reading-Report/blob
 #### 借鉴视频链接：[李沐学AI](https://www.bilibili.com/video/BV15P4y137jb/?spm_id_from=333.999.0.0&vd_source=6e22f74cbbb0cdf9444235d6ad11aabf)
 #### 论文阅读报告：[论文阅读报告](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/VIT/VIT%20report.md)
 
+##### 在NLP领域中transformer架构已经作为实际标准，但是在CV领域有限，尽管在前人实验中，有将注意力机制与卷积神经网络结合使用的，要么就是用于替换CNN中的某些组件。但是在VIT中，我们相当于直接将transformer进行应用于图像，拆分成补丁。但由于transformer框架没有过多的归纳偏置（在MLP上有），所以在中小型数据集上效果并不如ResNet，但是在大型数据集上有更加优秀的效果。并且随着模型参数增长没有出现过拟合的现象。
+
 #### 核心图：
  <td><img src="images/VIT1.png" alt="VIT1" width="800"/></td>
 
- 
+**首先观察输入：**
+输入为一个图片（224×224×3）（长宽RGB），我们将它打成16×16的patch，token就是16×16×3的维度（共计196个像素块）经过线性投影层做矩阵乘法得196×768+1×768（class）然后与位置编码通过sum方式进行更新。
 
+**进入编码器：**
+进入多头自注意力，拆分成KQV，同时又因为是多头自注意力；KQV变成了197×64，再经过拼接变为768维度，经过layernorm后进入MLP放大四倍，再投影回去。
+
+最后：
+- 全局信息聚合: 当输入序列（包括class token和patch tokens）通过多层Transformer编码器时，class token在每一层中与其他patch tokens交互并更新其表示。这种交互使得class token逐渐累积和整合整个图像的全局信息。
+
+- 分类任务的特征图: 经过所有编码器层的处理后，class token最终包含了整个图像的全局特征。因为分类任务需要的是全局信息，class token成为了最合适的输出作为最终的分类特征图。
+
+因此，class token 从输入阶段一直存在于所有编码器层，并在最后一层将其作为最终输出用于分类任务的决策。这意味着在每一层，class token都在继续累积来自其他patch tokens的信息，最终在输出时聚合了整个输入序列的全局信息。
+
+
+#### demo文件： 
+
+
+### （四）：Swintransformer：
+#### 原论文链接：
+#### 借鉴视频链接：
+#### 论文阅读报告：
+
+
+#### 核心图：
+
+#### demo文件：
 
 
 

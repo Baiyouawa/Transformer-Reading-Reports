@@ -71,7 +71,7 @@ Transformer-Reading-Report/
 
 #### Demo文件：![demo](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/Attention%20is%20all%20you%20need/demo.py)
 -----
-### (二）：Bert
+###  (二）：Bert
 #### 原论文链接：[Bert](https://arxiv.org/abs/1810.04805)
 #### 借鉴视频链接：[李沐学AI：bert](https://www.bilibili.com/video/BV1PL411M7eQ?vd_source=88664659bdda4409e78f614f5f213ce8)
 #### 论文阅读报告：[论文阅读报告](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/Bert/Bert%20report.md)
@@ -84,10 +84,10 @@ Transformer-Reading-Report/
   </tr>
 </table>
 
-**首先在右图我们可以看到输入操作：**
-在Bert当中我们的输入token序列，可以是单个句子也可以是两个句子打包在一起。每个序列的第一个token是一个特殊的分类【CLS】，然后我们通过两种方式区别句子，首先我们用一个特殊的token【SEP】将他们分开，其次我们为每个token添加一个学习到的嵌入，来表示是句子AorB。也就是说，输入是由相应的token+段落嵌入+位置嵌入求和构建的。
-**然后在左图我们可以看到模型架构：**
-Bert的模型核心就是基于原始实现的多层双向Transformer**编码器**，具体细节在上面可以看到。
+ ##### 首先在右图我们可以看到输入操作：
+##### 在Bert当中我们的输入token序列，可以是单个句子也可以是两个句子打包在一起。每个序列的第一个token是一个特殊的分类【CLS】，然后我们通过两种方式区别句子，首先我们用一个特殊的token【SEP】将他们分开，其次我们为每个token添加一个学习到的嵌入，来表示是句子AorB。也就是说，输入是由相应的token+段落嵌入+位置嵌入求和构建的。
+  ##### 然后在左图我们可以看到模型架构：
+##### Bert的模型核心就是基于原始实现的多层双向Transformer**编码器**，具体细节在上面可以看到。
 -----
 
 

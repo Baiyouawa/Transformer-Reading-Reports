@@ -115,7 +115,7 @@ demo文件：[demo](https://github.com/Baiyouawa/Transformer-Reading-Report/blob
 因此，class token 从输入阶段一直存在于所有编码器层，并在最后一层将其作为最终输出用于分类任务的决策。这意味着在每一层，class token都在继续累积来自其他patch tokens的信息，最终在输出时聚合了整个输入序列的全局信息。
 
 
-#### demo文件： 
+#### demo文件： [demo](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/VIT/demo.py)
 
 
 ### （四）：Swintransformer：
@@ -126,7 +126,7 @@ demo文件：[demo](https://github.com/Baiyouawa/Transformer-Reading-Report/blob
 
 #### 核心图：
 
-#### demo文件：
+#### demo文件：[demo])
 
 
 

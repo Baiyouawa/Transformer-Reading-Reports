@@ -21,6 +21,14 @@ Transformer-Reading-Report/
                     |—— images
                     |—— demo.py
 
+|—— GNN |—— GNN&Gragh.report #阅读报告
+        |—— images
+
+|—— Multimodal |—— Multimodal.report #阅读报告
+               |—— demo.py
+
+|—— conclude（PPT） |—— PPT #补充PPT文件
+
 |—— README.md   #简介与链接
 ```
 ## 各个分项目重点内容：
@@ -30,7 +38,7 @@ Transformer-Reading-Report/
 #### 原论文链接：[Attention is all you need](https://arxiv.org/abs/1706.03762)
 #### 借鉴视频讲解：[跟李沐学AI：attention](https://www.bilibili.com/video/BV1pu411o7BE/?spm_id_from=333.999.0.0&vd_source=6e22f74cbbb0cdf9444235d6ad11aabf)
 #### 论文阅读报告：[Attention is all you need report](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/Attention%20is%20all%20you%20need/Attention%20is%20all%20you%20need%20report.md)
-
+#### demo代码：[transformer](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/Attention%20is%20all%20you%20need/demo.py)
 **在过去的主流序列传导模型，主要是基于CNN或RNN开展的。**
 
 **在RNN中（LSTM；GRU）等被认为是先进的方法，但由于其具有时序性，这种固有的顺序性限制了并行化，当输入的序列较长的时候，在计算效率和内存上存在很大限制，即便我们通过因子化技巧和条件计算等进行优化。**
@@ -69,12 +77,13 @@ Transformer-Reading-Report/
 
 **解码器：** 上一步解码器输出作为V，与Q，K一起进行多头注意力计算，层归一化和线性层后实现输出，经过多层编码器-解码器架构后得到最终输出。
 
-#### Demo文件：![demo](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/Attention%20is%20all%20you%20need/demo.py)
 -----
 ###  (二）：Bert
 #### 原论文链接：[Bert](https://arxiv.org/abs/1810.04805)
 #### 借鉴视频链接：[李沐学AI：bert](https://www.bilibili.com/video/BV1PL411M7eQ?vd_source=88664659bdda4409e78f614f5f213ce8)
 #### 论文阅读报告：[论文阅读报告](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/Bert/Bert%20report.md)
+#### demo文件： [bert](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/Bert/demo.py)
+
 **Bert是一种用于语言理解预训练的双向的transformer模型，他可以联系左右上下文，不同于Elmo，无需再对特定任务时进行任务框架的大量修改，而是联系上下文的微调方式，进而提升了在词级，句子级理解。**
 #### 核心图：
 <table>
@@ -88,13 +97,14 @@ Transformer-Reading-Report/
 ##### 在Bert当中我们的输入token序列，可以是单个句子也可以是两个句子打包在一起。每个序列的第一个token是一个特殊的分类【CLS】，然后我们通过两种方式区别句子，首先我们用一个特殊的token【SEP】将他们分开，其次我们为每个token添加一个学习到的嵌入，来表示是句子AorB。也就是说，输入是由相应的token+段落嵌入+位置嵌入求和构建的。
   ##### 然后在左图我们可以看到模型架构：
 ##### Bert的模型核心就是基于原始实现的多层双向Transformer**编码器**，具体细节在上面可以看到。
-demo文件：[demo](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/Bert/demo.py)
+
 
 -----
 ### (三）：VIT
 #### 原论文链接：[VIT](https://arxiv.org/pdf/2010.11929)
 #### 借鉴视频链接：[李沐学AI](https://www.bilibili.com/video/BV15P4y137jb/?spm_id_from=333.999.0.0&vd_source=6e22f74cbbb0cdf9444235d6ad11aabf)
 #### 论文阅读报告：[论文阅读报告](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/VIT/VIT%20report.md)
+#### demo文件：[VIT](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/VIT/demo.py)
 
 ##### 在NLP领域中transformer架构已经作为实际标准，但是在CV领域有限，尽管在前人实验中，有将注意力机制与卷积神经网络结合使用的，要么就是用于替换CNN中的某些组件。但是在VIT中，我们相当于直接将transformer进行应用于图像，拆分成补丁。但由于transformer框架没有过多的归纳偏置（在MLP上有），所以在中小型数据集上效果并不如ResNet，但是在大型数据集上有更加优秀的效果。并且随着模型参数增长没有出现过拟合的现象。
 
@@ -115,16 +125,38 @@ demo文件：[demo](https://github.com/Baiyouawa/Transformer-Reading-Report/blob
 因此，class token 从输入阶段一直存在于所有编码器层，并在最后一层将其作为最终输出用于分类任务的决策。这意味着在每一层，class token都在继续累积来自其他patch tokens的信息，最终在输出时聚合了整个输入序列的全局信息。
 
 
-#### demo文件： [demo](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/VIT/demo.py)
 
+-----
 
 ### （四）：Swintransformer：
 #### 原论文链接：[Swin Transformer](https://arxiv.org/pdf/2103.14030)
 #### 借鉴视频链接：[李沐学AI](https://www.bilibili.com/video/BV13L4y1475U?vd_source=88664659bdda4409e78f614f5f213ce8)
 #### 论文阅读报告：[论文阅读报告](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/swintransformer/SwinTransformer%20report.md)
+#### demo文件：[]()
 
 
 #### 核心图：
+<table>
+  <tr>
+    <td><img src="images/swin2.png" alt="swin2" width="1300"/></td>
+    <td><img src="images/swin3.png" alt="swin3" width="1300"/></td>
+  </tr>
+</table>
+
+#### 流程：
+
+
+<table>
+  <tr>
+    <td><img src="images/swin4.png" alt="swin4" width="1300"/></td>
+    <td><img src="images/swin5.png" alt="swin5" width="1300"/></td>
+  </tr>
+</table>
+
+#### 窗口计算&掩码
+
+
+
 
 #### demo文件：[demo])
 

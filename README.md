@@ -119,9 +119,9 @@ demo文件：[demo](https://github.com/Baiyouawa/Transformer-Reading-Report/blob
 
 
 ### （四）：Swintransformer：
-#### 原论文链接：
-#### 借鉴视频链接：
-#### 论文阅读报告：
+#### 原论文链接：[Swin Transformer](https://arxiv.org/pdf/2103.14030)
+#### 借鉴视频链接：[李沐学AI](https://www.bilibili.com/video/BV13L4y1475U?vd_source=88664659bdda4409e78f614f5f213ce8)
+#### 论文阅读报告：[论文阅读报告](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/swintransformer/SwinTransformer%20report.md)
 
 
 #### 核心图：

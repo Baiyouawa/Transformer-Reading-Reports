@@ -1,4 +1,4 @@
-# Transformer-Reading-Report🎉
+# Transformer-Reading-Reports🎉
 # Transformer的论文阅读报告与代码理解🎉
 ## 🎄本项目包含对多篇Transformer论文及其衍生文章的论文精读报告及对代码的理解
 

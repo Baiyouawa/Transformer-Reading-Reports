@@ -123,9 +123,6 @@ Transformer-Reading-Report/
 - 分类任务的特征图: 经过所有编码器层的处理后，class token最终包含了整个图像的全局特征。因为分类任务需要的是全局信息，class token成为了最合适的输出作为最终的分类特征图。
 
 因此，class token 从输入阶段一直存在于所有编码器层，并在最后一层将其作为最终输出用于分类任务的决策。这意味着在每一层，class token都在继续累积来自其他patch tokens的信息，最终在输出时聚合了整个输入序列的全局信息。
-
-
-
 -----
 
 ### （四）：Swintransformer：
@@ -167,9 +164,9 @@ Swin transformer就是让VIT也能像CNN一样分成很多block，形成层级�
 **通过这种循环移位，分割填补。有的窗口应该进行注意力计算，同样，对于有的窗口中的其他部分，不应该进行窗口注意力计算，所以我们采取掩码方式，在矩阵乘法时，对于输出部分不需要的部分设定为较小的负数吗，进而在softmax操作之后，我们可以实现掩码。**
 
 ### （五）：GNN&Gragh：
-#### 原论文1链接：[]()
-#### 原论文2链接：[]()
-#### 视频讲解链接：[]()
+#### 博客链接：[introduction](https://distill.pub/2021/gnn-intro/)
+#### 原论文2链接：[GNN](https://arxiv.org/pdf/2310.11829)
+#### 视频讲解链接：[李沐学AI](https://www.bilibili.com/video/BV1iT4y1d7zP?vd_source=88664659bdda4409e78f614f5f213ce8)
 #### 论文阅读报告：[]()
 
 

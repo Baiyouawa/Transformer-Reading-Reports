@@ -24,7 +24,8 @@ Transformer-Reading-Report/
 |—— GNN |—— GNN&Gragh.report #阅读报告
         |—— images
 
-|—— Multimodal |—— Multimodal.report #阅读报告
+|—— Multimodal |—— ViLT.report #阅读报告
+               |—— introduction.report #串讲阅读报告
                |—— demo.py
 
 |—— conclude（PPT） |—— PPT #补充PPT文件
@@ -162,7 +163,7 @@ Swin transformer就是让VIT也能像CNN一样分成很多block，形成层级�
 #### 窗口计算&掩码：
 在经过移动窗口之后，会出现每个窗口Patch个数不同的情况，这也就导致我们不能转化为一个Batch进行计算，如果补充0（在外围）又会使得计算复杂度增加，所以我们采用掩码的方式（拼图）
 **通过这种循环移位，分割填补。有的窗口应该进行注意力计算，同样，对于有的窗口中的其他部分，不应该进行窗口注意力计算，所以我们采取掩码方式，在矩阵乘法时，对于输出部分不需要的部分设定为较小的负数吗，进而在softmax操作之后，我们可以实现掩码。**
-
+-----
 ### （五）：GNN&Gragh：
 #### 博客链接：[introduction](https://distill.pub/2021/gnn-intro/)
 #### 原论文2链接：[GNN](https://arxiv.org/pdf/2310.11829)
@@ -175,4 +176,14 @@ Swin transformer就是让VIT也能像CNN一样分成很多block，形成层级�
 
 
 
+-----
+### （六）：Multimoda：
+#### 论文链接：[ViTL]()
+#### 视频讲解1：[]()
+#### 视频讲解2：[]()
+#### 论文阅读报告1：[]()
+#### 论文阅读报告2：[]()
 
+#### 核心图：
+
+-----

@@ -24,8 +24,7 @@ Transformer-Reading-Report/
 |—— GNN |—— GNN&Gragh.report #阅读报告
         |—— images
 
-|—— Multimodal |—— ViLT.report #阅读报告
-               |—— introduction.report #串讲阅读报告
+|—— Multimodal |—— ViLT&conclusion.report #VITL&串讲阅读报告
                |—— demo.py
 
 |—— conclude（PPT） |—— PPT #补充PPT文件

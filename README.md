@@ -21,7 +21,7 @@ Transformer-Reading-Report/
                     |—— images
                     |—— demo.py
 
-|—— GNN |—— GNN&Gragh.report #阅读报告
+|—— GNN |—— GNN&Gragh.report #阅读报告 （未完结）
         |—— images
 
 |—— Multimodal |—— ViLT&conclusion.report #VITL&串讲阅读报告
@@ -184,8 +184,8 @@ Swin transformer就是让VIT也能像CNN一样分成很多block，形成层级�
 #### 论文链接：[ViTL]()
 #### 视频讲解1：[]()
 #### 视频讲解2：[]()
-#### 论文阅读报告1：[]()
-#### 论文阅读报告2：[]()
+#### 论文阅读报告：[]()
+#### demo文件：[]()
 
 #### 核心图：
 

@@ -267,11 +267,12 @@ Adaptation（适应）：
 
 -----
 ### （六）：Multimoda：
-#### 论文链接：[ViTL]()
-#### 视频讲解1：[]()
-#### 视频讲解2：[]()
+#### 论文链接：[ViTL](https://proceedings.mlr.press/v139/kim21k/kim21k.pdf)
+#### 视频讲解1：[李沐学AI](【ViLT 论文精读【论文精读】】https://www.bilibili.com/video/BV14r4y1j74y?vd_source=88664659bdda4409e78f614f5f213ce8)
+#### 视频讲解2：[李沐学AI](【多模态论文串讲·上【论文精读·46】】https://www.bilibili.com/video/BV1Vd4y1v77v?vd_source=88664659bdda4409e78f614f5f213ce8)
 #### 论文阅读报告：[]()
-#### demo文件：[]()
+#### demo文件：[ViTL]()
+
 
 #### 核心图：
 

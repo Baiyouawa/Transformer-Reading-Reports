@@ -22,9 +22,9 @@ Transformer-Reading-Report/
                     |—— demo.py
 
 |—— GNN |—— GNN&Gragh.report #阅读报告
-        |—— images
+未完结 |—— images
 
-|—— Multimodal |—— Multimodal.report #阅读报告
+|—— Multimodal |—— ViLT&conclusion.report #VITL&串讲阅读报告
                |—— demo.py
 
 |—— conclude（PPT） |—— PPT #补充PPT文件
@@ -125,14 +125,13 @@ Transformer-Reading-Report/
 因此，class token 从输入阶段一直存在于所有编码器层，并在最后一层将其作为最终输出用于分类任务的决策。这意味着在每一层，class token都在继续累积来自其他patch tokens的信息，最终在输出时聚合了整个输入序列的全局信息。
 
 
-
 -----
 
 ### （四）：Swintransformer：
 #### 原论文链接：[Swin Transformer](https://arxiv.org/pdf/2103.14030)
 #### 借鉴视频链接：[李沐学AI](https://www.bilibili.com/video/BV13L4y1475U?vd_source=88664659bdda4409e78f614f5f213ce8)
 #### 论文阅读报告：[论文阅读报告](https://github.com/Baiyouawa/Transformer-Reading-Report/blob/main/swintransformer/SwinTransformer%20report.md)
-#### demo文件：[]()
+#### demo文件：[Swin transformer](https://github.com/Baiyouawa/Transformer-Reading-Reports/blob/main/swintransformer/swin%20transformer.py)
 
 Swin transformer就是让VIT也能像CNN一样分成很多block，形成层级式的提取，具有多尺度的概念。
 通过移动窗口将自注意力计算限制在不重叠的局部窗口中，提高效率的同时，允许跨窗口通信连接。
@@ -166,7 +165,28 @@ Swin transformer就是让VIT也能像CNN一样分成很多block，形成层级�
 在经过移动窗口之后，会出现每个窗口Patch个数不同的情况，这也就导致我们不能转化为一个Batch进行计算，如果补充0（在外围）又会使得计算复杂度增加，所以我们采用掩码的方式（拼图）
 **通过这种循环移位，分割填补。有的窗口应该进行注意力计算，同样，对于有的窗口中的其他部分，不应该进行窗口注意力计算，所以我们采取掩码方式，在矩阵乘法时，对于输出部分不需要的部分设定为较小的负数吗，进而在softmax操作之后，我们可以实现掩码。**
 
-#### demo文件：[demo]()
+
+-----
+### （五）：GNN&Gragh：
+#### 博客链接：[introduction](https://distill.pub/2021/gnn-intro/)
+#### 原论文2链接：[GNN](https://arxiv.org/pdf/2310.11829)
+#### 视频讲解链接：[李沐学AI](https://www.bilibili.com/video/BV1iT4y1d7zP?vd_source=88664659bdda4409e78f614f5f213ce8)
+#### 论文阅读报告：[]()
 
 
 
+#### 核心图：
+
+
+
+-----
+### （六）：Multimoda：
+#### 论文链接：[ViTL]()
+#### 视频讲解1：[]()
+#### 视频讲解2：[]()
+#### 论文阅读报告：[]()
+#### demo文件：[]()
+
+#### 核心图：
+
+-----

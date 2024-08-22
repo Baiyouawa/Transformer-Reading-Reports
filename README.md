@@ -21,8 +21,8 @@ Transformer-Reading-Report/
                     |—— images
                     |—— demo.py
 
-|—— GNN |—— GNN&Gragh.report #阅读报告 （未完结）
-        |—— images
+|—— GNN |—— GNN&Gragh.report #阅读报告
+未完结 |—— images
 
 |—— Multimodal |—— ViLT&conclusion.report #VITL&串讲阅读报告
                |—— demo.py

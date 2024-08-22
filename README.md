@@ -118,6 +118,7 @@ Transformer-Reading-Report/
 进入多头自注意力，拆分成KQV，同时又因为是多头自注意力；KQV变成了197×64，再经过拼接变为768维度，经过layernorm后进入MLP放大四倍，再投影回去。
 
 最后：
+
 - 全局信息聚合: 当输入序列（包括class token和patch tokens）通过多层Transformer编码器时，class token在每一层中与其他patch tokens交互并更新其表示。这种交互使得class token逐渐累积和整合整个图像的全局信息。
 
 - 分类任务的特征图: 经过所有编码器层的处理后，class token最终包含了整个图像的全局特征。因为分类任务需要的是全局信息，class token成为了最合适的输出作为最终的分类特征图。
@@ -167,17 +168,102 @@ Swin transformer就是让VIT也能像CNN一样分成很多block，形成层级�
 
 
 -----
-### （五）：GNN&Gragh：
+### （五）：GNN&Gragh：(未完结）
 #### 博客链接：[introduction](https://distill.pub/2021/gnn-intro/)
 #### 原论文2链接：[GNN](https://arxiv.org/pdf/2310.11829)
 #### 视频讲解链接：[李沐学AI](https://www.bilibili.com/video/BV1iT4y1d7zP?vd_source=88664659bdda4409e78f614f5f213ce8)
-#### 论文阅读报告：[]()
+#### 论文阅读报告：[GNN](https://github.com/Baiyouawa/Transformer-Reading-Reports/blob/main/GNN/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%9A.md)
 
-
+图是一种常见的数据结构，它由顶点，边，整体图三部分构成，他可以表示很多信息（文本，图片，复杂社交网络等）
 
 #### 核心图：
+<table>
+  <tr>
+    <td><img src="images/GNN2.png" alt="GNN2" width="1300"/></td>
+    <td><img src="images/GNN.png" alt="GNN" width="1300"/></td>
+  </tr>
+</table>
+
+**GNN是对图上所有属性（点，边，全局）进行可以优化的变换，同时保持住图的对称信息。会对图中点，边等的向量进行变换，但不会对边连接的哪些顶点等信息不会改变。
+GFMs是图基础模型，主要分为三大类：**
+**1. GNN-based Models（基于GNN的模型）**
+这一类模型以图神经网络为核心架构，重点关注图结构数据的处理和学习。分为以下几个部分：    
+
+Backbone Architectures（骨干架构）：    
 
 
+    Message Passing-based（基于消息传递）： 这是传统的GNN架构，依赖图的邻接矩阵，信息在图的节点之间进行传递和聚合。这种方法在局部信息传播方面表现良好，但可能在捕获全局信息方面存在不足。    
+    
+    
+    Graph Transformer-based（基于图Transformer）： 相较于传统的消息传递机制，图Transformer通过全连接自注意力机制在图中每一对节点之间进行信息传递，能够更好地捕获长程依赖关系和全局信息。    
+    
+    
+Pre-training（预训练）：    
+
+    Contrastive Methods（对比方法）： 这种方法通过最大化不同图视角间的互信息，使得模型可以学习到图的稳健表示，通常采用相同或不同尺度之间的对比。    
+    
+    Generative Methods（生成方法）： 生成方法侧重于重建图的特定部分，或者预测图的属性，通过这种方式来学习图的结构和语义信息。    
+    
+Adaptation（适应）：    
+
+    Fine-Tuning（微调）： 将预训练的模型在具体下游任务上进行微调，使得模型能够适应特定的任务需求。    
+    
+    Prompt-Tuning（提示调优）： 通过特定提示信息来调优模型，使其能够快速适应新任务，减少对大量标注数据的依赖。    
+    
+**2. LLM-based Models（基于LLM的模型）**    
+
+这类模型以大规模语言模型为基础，关注如何将图数据转化为适合语言模型处理的形式。分为以下部分：    
+
+Backbone Architectures（骨干架构）：    
+ 
+    Graph-to-Token（图到标记）： 通过将图中的节点或边信息编码为Token，使得图数据能够输入到LLM中进行处理。    
+    
+    Graph-to-Text（图到文本）： 通过将图的结构信息转化为文本形式，然后利用语言模型来进行理解和生成。    
+    
+Pre-training（预训练）：    
+
+    Language Modelling（语言建模）： 以语言模型为基础，通过大量未标注的文本数据进行预训练，使得模型能够捕捉语言中的一般语义信息。    
+    
+    Masked Language Modelling（掩码语言建模）： 类似于BERT模型，通过对部分文本进行掩码并让模型预测这些掩码内容，从而使模型能够理解上下文。    
+    
+Adaptation（适应）：    
+
+    Manual Prompting（手动提示）： 通过手动设计的提示词来引导模型的输出，使其适应不同任务。    
+    
+    Automatic Prompting（自动提示）： 自动生成合适的提示词，减少人工干预，提升模型在不同任务上的适应性。
+    
+**3. GNN+LLM-based Models（GNN+LLM结合的模型）**
+
+这类模型尝试将图神经网络与大规模语言模型的优势结合，利用两者的互补特性来提升图数据处理的能力。分为以下部分：
+
+Backbone Architectures（骨干架构）：
+
+    GNN-centric（以GNN为中心）： 以GNN为主要架构，结合语言模型来辅助处理语言或文本相关的信息。
+    
+    Symmetric（对称式）： GNN与LLM并重，模型架构中平衡两者的贡献，使得模型能够同时处理图结构和文本信息。
+    
+    LLM-centric（以LLM为中心）： 以语言模型为主要架构，结合GNN来处理图结构信息。
+    
+Pre-training（预训练）：
+
+    GNN or LLM-based（基于GNN或LLM）： 采用GNN或LLM的预训练方法，根据任务需求选择合适的预训练策略。
+    
+    Alignment-based（对齐方法）： 通过对齐GNN和LLM之间的表示，使两者能够更好地协同工作。
+    
+Adaptation（适应）：
+
+    Fine-Tuning（微调）： 通过对结合后的模型进行微调，提升其在特定任务上的表现。
+    
+    Prompt-Tuning（提示调优）： 结合GNN与LLM的提示信息，通过调优使模型适应更多样化的任务场景。
+    
+对比与总结
+
+    处理对象的不同： 基于GNN的模型专注于图结构数据，而基于LLM的模型则将图数据转换为文本或Token形式处理。GNN+LLM结合的模型试图整合两者的优势，处理更加复杂的图-语言任务。
+    
+    架构设计： GNN-based模型侧重于图结构的特定学习机制，而LLM-based模型侧重于自然语言处理的任务需求。GNN+LLM结合模型则尝试在二者之间找到最佳平衡点。
+    
+    预训练与适应方式： GNN-based模型通常利用对比学习和生成方法来捕获图的语义信息，而LLM-based模型则更依赖语言建模策略。结合模型通过对齐两者表示或微调来提升性能。
+    
 
 -----
 ### （六）：Multimoda：

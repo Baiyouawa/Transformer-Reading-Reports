@@ -270,10 +270,16 @@ Adaptation（适应）：
 #### 论文链接：[ViTL](https://proceedings.mlr.press/v139/kim21k/kim21k.pdf)
 #### 视频讲解1：[李沐学AI](https://www.bilibili.com/video/BV14r4y1j74y?vd_source=88664659bdda4409e78f614f5f213ce8)
 #### 视频讲解2：[李沐学AI](https://www.bilibili.com/video/BV1Vd4y1v77v?vd_source=88664659bdda4409e78f614f5f213ce8)
-#### 论文阅读报告：[]()
+#### 论文阅读报告：[ViTL&多模态](https://github.com/Baiyouawa/Transformer-Reading-Reports/blob/main/Multimodal/ViLT%26%E5%A4%9A%E6%A8%A1%E6%80%81%E4%B8%B2%E8%AE%B2%E7%B2%BE%E8%AF%BB%EF%BC%9A.md)
 #### demo文件：[ViTL]()
 
 
 #### 核心图：
+<td><img src="images/ViTL1.png" alt="GNN2" width="700"/></td>
+
+-----
+
+    
+<td><img src="images/ViTL2.png" alt="GNN" width="700"/></td>
 
 -----

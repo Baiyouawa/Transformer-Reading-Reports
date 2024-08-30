@@ -29,6 +29,8 @@ Transformer-Reading-Report/
 
 |—— conclude（PPT） |—— PPT #补充PPT文件
 
+|—— AlexNet  |—— AlexNet.report #Alexnet论文阅读报告
+
 |—— README.md   #简介与链接
 ```
 ## 各个分项目重点内容：

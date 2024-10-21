@@ -3,7 +3,8 @@
 ## 文档结构：
 ```
 /Reading-Reports-and-codes
-|—— GPT-ST/ |—— Group-reporting.md #阅读报告
+|—— GPT-ST/ |—— Group-reporting.pptx #阅读报告
+|—— 阅读方法.md  #对阅读论文方法的总结
 |—— README.md   #简介与链接
 
 ```
